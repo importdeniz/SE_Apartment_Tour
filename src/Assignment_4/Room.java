@@ -1,21 +1,19 @@
-package Assignment_3;
+package Assignment_4;
 
 public class Room {
     private String name;
-    private boolean lighting;
+    private boolean lighting = false;
     private boolean isEntered;
 
-    public Room(String name, boolean lighting){
+    public Room(String name){
         this.name = name;
-        this.lighting = lighting;
-
     }
 
     public boolean isLighting() {
         return lighting;
     }
 
-    public void switchLight(boolean lighting) {
+    public void switchLight() {
         this.lighting = !lighting;
     }
 
