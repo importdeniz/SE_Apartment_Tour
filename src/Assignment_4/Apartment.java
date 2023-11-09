@@ -3,7 +3,7 @@ package Assignment_4;
 import java.util.*;
 
 public class Apartment {
-    Set<Room> rooms = new HashSet<>();
+    public Set<Room> rooms = new HashSet<>();
     public boolean entered = false;
 
     public void enter(){
