@@ -8,11 +8,6 @@ public class Bathroom {
     }
 
     public void switchShower(){
-        if shower{
-            this.shower = false;
-        }
-        else{
-            this.shower = true;
-        }
+        this.shower = !shower;
     }
 }

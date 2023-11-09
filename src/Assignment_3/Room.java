@@ -15,12 +15,7 @@ public class Room {
     }
 
     public void switchLight(boolean lighting) {
-        if isLighting(){
-            this.lighting = false;
-        }
-        else{
-            this.lighting = true;
-        }
+        this.lighting = !lighting;
     }
 
     public String getName() {

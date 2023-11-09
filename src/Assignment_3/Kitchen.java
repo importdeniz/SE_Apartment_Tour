@@ -8,11 +8,7 @@ public class Kitchen {
     }
 
     public void switchStove(){
-        if stove{
-            this.stove = false;
-        }
-        else{
-            this.stove = true;
-        }
+        if 
+        this.stove = !stove;
     }
 }
