@@ -13,9 +13,18 @@ public class Apartment {
     public boolean isEntered(){
         return entered;
     }
+
+    public void leave(){
+        this.entered = false;
+    }
+
+    public boolean isEntered(){
+        return entered;
+    }
     public void addRoom(Room room){
         rooms.add(room);
     }
+
 
 
     public void getRooms() {    //print alle Räume in Apartment
@@ -23,5 +32,4 @@ public class Apartment {
             System.out.println(i.getName());
         }
     }
-}
 
