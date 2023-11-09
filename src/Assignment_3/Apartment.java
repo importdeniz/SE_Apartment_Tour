@@ -1,6 +1,9 @@
 package Assignment_3;
 
+import java.util.*;
+
 public class Apartment {
+    Set<Room> rooms = new HashSet<>();
     private boolean entered;
     public Apartment(){
         this.entered = entered;
@@ -17,5 +20,8 @@ public class Apartment {
 
     public boolean isEntered(){
         return entered;
+    }
+    public void addRoom(Room room){
+        rooms.add(room);
     }
 }

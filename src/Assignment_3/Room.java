@@ -8,6 +8,7 @@ public class Room {
     public Room(String name, boolean lighting){
         this.name = name;
         this.lighting = lighting;
+
     }
 
     public boolean isLighting() {

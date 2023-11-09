@@ -8,7 +8,9 @@ public class Kitchen {
     }
 
     public void switchStove(){
-        if 
+        if(stove){
+            System.out.println("Du hast 2000kWh verbraucht während der Herd an war.");
+        }
         this.stove = !stove;
     }
 }
