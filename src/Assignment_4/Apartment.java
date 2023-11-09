@@ -23,9 +23,10 @@ public class Apartment {
         rooms.add(room);
     }
 
-    public void getRooms() {
+
+    public void getRooms() {    //print alle Räume in Apartment
         for (Room i : rooms) {
-            System.out.println(i.getName());;
+            System.out.println(i.getName());
         }
     }
 }
