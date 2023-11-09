@@ -22,6 +22,6 @@ public class Apartment {
         return entered;
     }
     public void addRoom(Room room){
-        rooms.add(room);
+        rooms.add(room);     // test
     }
 }
