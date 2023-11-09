@@ -1,9 +1,10 @@
-package Assignment_3;
+package Assignment_4;
 
-public class Kitchen {
+public class Kitchen extends Room{
     private boolean stove = false;  //boolean dusche
 
-    public Kitchen(){   //konstruktor
+    public Kitchen(){
+        super("Küche");   //konstruktor
         this.stove = stove;
     }
 
