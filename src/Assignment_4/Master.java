@@ -3,6 +3,11 @@ package Assignment_4;
 import java.util.Scanner;
 
 public class Master {
+
+    /*
+    Diese Klasse ermöglicht uns ein genaues Skript zu erstellen, womit der Input des Users verarbeitet wird,
+    und Aktionen durchgeführt werden.
+     */
     Apartment apartment = new Apartment();
     Room flur = new Room("Flur");
     Room wohnzimmer = new Room("Wohnzimmer");
@@ -11,6 +16,10 @@ public class Master {
     Kitchen kuche = new Kitchen();
 
     public Master() {
+        /*
+        In dem Konstruktor der Klasse werden zur Initialisierung der Instanz von 'Master' alle erstellten Räume in die
+        ArrayList hinzugefügt und der Flur betreten.
+         */
         apartment.enter();
         apartment.addRoom(flur);
         apartment.addRoom(wohnzimmer);
@@ -21,6 +30,10 @@ public class Master {
     }
 
     public static String greeting() {
+        /*
+        Diese Methode fragt den Benutzer, ob dieser das Apartment
+         betreten will, oder das Programm beendet werden soll.
+         */
         System.out.println("Willkommen");
         Scanner willkommen = new Scanner(System.in);
         System.out.println("Was möchten Sie tun?\n" +
@@ -31,6 +44,9 @@ public class Master {
     }
 
     public void enterHallway() {
+        /*
+        Flur wird betreten und es werden durch if-conditions weitere ausgewählte Aktionen ermöglicht.
+         */
         System.out.println("Sie sind jetzt im Flur, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Nachbarraum betreten\n" +
@@ -73,6 +89,10 @@ public class Master {
     }
 
     public void enterLivingRoom() {
+        /*
+        Wohnzimmer wird betreten und es werden durch if-conditions Aktionsmöglichkeiten
+        zur Verfügung gestellt
+         */
         System.out.println("Sie sind jetzt im Wohnzimmer, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Raum verlassen\n" +
@@ -100,6 +120,9 @@ public class Master {
     }
 
     public void enterBedroom() {
+        /*
+        Schlafzimmer wird betreten, if-conditions ermöglichen weitere Aktionen
+         */
         System.out.println("Sie sind jetzt im Schlafzimmer, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Raum verlassen\n" +
@@ -131,6 +154,10 @@ public class Master {
     }
 
     public void enterBathroom() {
+        /*
+        Badezimmer wird betreten, hier werden die standardmäßigen Optionen angeboten und
+        zusätzlich kann man eine Dusche betätigen
+         */
         System.out.println("Sie sind jetzt im Badezimmer, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Dusche betätigen\n" +
@@ -167,6 +194,9 @@ public class Master {
     }
 
     public void enterKitchen() {
+        /*
+        Küche wird betreten und zusätzlich kann man einen Herd betätigen.
+         */
         System.out.println("Sie sind jetzt in der Küche, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Herd betätigen\n" +
@@ -203,6 +233,10 @@ public class Master {
     }
 
     public void leaveApartment() {
+        /*
+        Apartment wird verlassen, es wird über jeden Raum iteriert und geschaut ob das Licht, die Dusche
+        oder der Herd an ist und eine entsprechende Warnung wird herausgegeben.
+         */
         for (Room i : apartment.rooms) {
             if (i.isLighting()) {
                 System.out.println("Warnung! Das Licht ist an: " + i.getName() + "\n"
@@ -216,7 +250,7 @@ public class Master {
                 }
             }
         }
-        if (bad.isShower()) {
+        if (bad.isShower()) {           //prüft ob die Dusche an ist
             System.out.println("Warnung! Die Dusche im Badezimmer ist an\n" +
                     "Wohnung wirklich verlassen?\n" +
                     "1) Ja\n" +
@@ -226,7 +260,7 @@ public class Master {
             if (input2.equals("2")) {
                 enterHallway();
             }
-            if (kuche.isStove()) {
+            if (kuche.isStove()) {      //prüft, ob der Herd an ist
                 System.out.println("Warnung! Der Herd in der Küche ist an.\n" +
                         "Wohnung wirklich verlassen?\n" +
                         "1) Ja\n" +

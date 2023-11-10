@@ -1,8 +1,13 @@
 package Assignment_4;
 
 public class Bathroom extends Room{
-    private boolean shower = false;
-    private boolean lighting = false;
+
+    /*
+    Diese Klasse beschreibt den speziellen Raum 'Badezimmer'
+     */
+
+    private boolean shower = false;     //Gibt an, ob Dusche an oder aus ist-
+    private boolean lighting = false;   //Gibt an, ob Licht im Bad an oder aus ist.
 
     public Bathroom(){
         super("Badezimmer");      //konstruktor
@@ -10,11 +15,11 @@ public class Bathroom extends Room{
     }
 
     public void switchShower(){
-        this.shower = !shower;
+        this.shower = !shower;      //Dusche an bzw. ausschalten
     }
 
     public void switchLight() {
-        this.lighting = !lighting;
+        this.lighting = !lighting;      //Licht an bzw. ausschalten
     }
 
     @Override

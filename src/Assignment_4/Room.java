@@ -1,7 +1,12 @@
 package Assignment_4;
 
 public class Room {
-    private String name;
+
+    /*
+    Diese Klasse wird benutzt, um Instanzen vom Typ 'Room' zu erstellen
+     */
+
+    private String name;    //Raumbenennung (z.B. 'Wohnzimmer')
     private boolean lighting = false;
     private boolean isEntered;
 
@@ -13,15 +18,12 @@ public class Room {
         return lighting;
     }
 
-    public void switchLight() {
+    public void switchLight() {     //Lichtschalter
         this.lighting = !lighting;
     }
 
     public String getName() {
         return name;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void enter(){
