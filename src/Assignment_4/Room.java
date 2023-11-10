@@ -9,7 +9,7 @@ public class Room {
         this.name = name;
     }
 
-    public boolean isLighting() {
+    public boolean isLighting() {    //Beleuchtung checken
         return lighting;
     }
 
