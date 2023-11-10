@@ -8,7 +8,8 @@ public class Main {
             Master master = new Master();
         }
         else {
-            Master.leaveApartment();
+            Master master = new Master();
+            master.leaveApartment();
         }
     }
 }

@@ -3,33 +3,28 @@ package Assignment_4;
 import java.util.*;
 
 public class Apartment {
-    public Set<Room> rooms = new HashSet<>();
+    public ArrayList<Room> rooms = new ArrayList<>();
     public boolean entered = false;
 
-    public void enter(){
+    public void enter() {
         this.entered = true;
     }
 
-    public boolean isEntered(){
-        return entered;
-    }
-
-    public void leave(){
+    public void leave() {
         this.entered = false;
     }
 
-    public boolean isEntered(){
+    public boolean isEntered() {
         return entered;
     }
-    public void addRoom(Room room){
+
+    public void addRoom(Room room) {
         rooms.add(room);
     }
 
 
-
-    public void getRooms() {    //print alle Räume in Apartment
-        for (Room i : rooms) {
-            System.out.println(i.getName());
-        }
+    public ArrayList<Room> getRooms() {
+        return rooms;
     }
+}
 
