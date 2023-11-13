@@ -260,7 +260,9 @@ public class Master {
             if (input3.equals("2")) {
                 enterHallway();
             }
-            apartment.leave();
+            else {
+                apartment.leave();
+            }
         }
 
         if (bad.isShower()) { //prüft, ob die Dusche an ist
@@ -272,6 +274,9 @@ public class Master {
             String input2 = leave2.nextLine();
             if (input2.equals("2")) {
                 enterHallway();
+            }
+            else {
+                apartment.leave();
             }
         }
     }
