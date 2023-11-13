@@ -5,7 +5,7 @@ public class Kitchen extends Room{
     /*
     Diese Klasse beschreibt den speziellen Raum 'Küche'
     */
-    private long start;
+    private long start;     //start timer für den herd
     private boolean stove = false;  //boolean herd
     private boolean lighting = false;
 
