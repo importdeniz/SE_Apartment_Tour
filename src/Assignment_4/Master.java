@@ -32,8 +32,8 @@ public class Master {
     public static String greeting() {
         /*
         Diese Methode fragt den Benutzer, ob dieser das Apartment
-         betreten will, oder das Programm beendet werden soll.
-         */
+        betreten will, oder das Programm beendet werden soll.
+        */
         System.out.println("Willkommen");
         Scanner willkommen = new Scanner(System.in);
         System.out.println("Was möchten Sie tun?\n" +
@@ -46,7 +46,7 @@ public class Master {
     public void enterHallway() {
         /*
         Flur wird betreten und es werden durch if-conditions weitere ausgewählte Aktionen ermöglicht.
-         */
+        */
         System.out.println("Sie sind jetzt im Flur, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Nachbarraum betreten\n" +
@@ -92,7 +92,7 @@ public class Master {
         /*
         Wohnzimmer wird betreten und es werden durch if-conditions Aktionsmöglichkeiten
         zur Verfügung gestellt
-         */
+        */
         System.out.println("Sie sind jetzt im Wohnzimmer, was möchten Sie tun?\n" +
                 "1) Lichtschalter betätigen\n" +
                 "2) Raum verlassen\n" +
@@ -249,17 +249,8 @@ public class Master {
                 }
             }
         }
-        if (bad.isShower()) {           //prüft ob die Dusche an ist
-            System.out.println("Warnung! Die Dusche im Badezimmer ist an\n" +
-                    "Wohnung wirklich verlassen?\n" +
-                    "1) Ja\n" +
-                    "2) Nein");
-            Scanner leave2 = new Scanner(System.in);
-            String input2 = leave2.nextLine();
-            if (input2.equals("2")) {
-                enterHallway();
-            }
-        if (kuche.isStove()) {      //prüft, ob der Herd an ist
+
+        if (kuche.isStove()) { //prüft, ob der Herd an ist
             System.out.println("Warnung! Der Herd in der Küche ist an.\n" +
                     "Wohnung wirklich verlassen?\n" +
                     "1) Ja\n" +
@@ -270,6 +261,17 @@ public class Master {
                 enterHallway();
             }
             apartment.leave();
+        }
+
+        if (bad.isShower()) { //prüft, ob die Dusche an ist
+            System.out.println("Warnung! Die Dusche im Badezimmer ist an\n" +
+                    "Wohnung wirklich verlassen?\n" +
+                    "1) Ja\n" +
+                    "2) Nein");
+            Scanner leave2 = new Scanner(System.in);
+            String input2 = leave2.nextLine();
+            if (input2.equals("2")) {
+                enterHallway();
             }
         }
     }

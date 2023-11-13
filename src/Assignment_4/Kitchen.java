@@ -4,13 +4,13 @@ public class Kitchen extends Room{
 
     /*
     Diese Klasse beschreibt den speziellen Raum 'Küche'
-     */
+    */
     private long start;
     private boolean stove = false;  //boolean herd
     private boolean lighting = false;
 
     public Kitchen(){
-        super("Küche");   //konstruktor
+        super("Küche"); //konstruktor
         this.stove = stove;
     }
 
@@ -31,7 +31,7 @@ public class Kitchen extends Room{
     }
 
     public boolean isStove() {
-        return stove;
+        return this.stove;
     }
 
     @Override
