@@ -211,7 +211,6 @@ public class Master {
         }
         if (input.equals("2")) {
             kuche.switchStove();
-            System.out.println("Herd = " + kuche.isStove());
             enterKitchen();
         }
         if (input.equals("3")) {
@@ -260,17 +259,17 @@ public class Master {
             if (input2.equals("2")) {
                 enterHallway();
             }
-            if (kuche.isStove()) {      //prüft, ob der Herd an ist
-                System.out.println("Warnung! Der Herd in der Küche ist an.\n" +
-                        "Wohnung wirklich verlassen?\n" +
-                        "1) Ja\n" +
-                        "2) Nein");
-                Scanner leave3 = new Scanner(System.in);
-                String input3 = leave3.nextLine();
-                if (input3.equals("2")) {
-                    enterHallway();
-                }
-                System.out.println("Sie haben die Tour verlassen.");
+        if (kuche.isStove()) {      //prüft, ob der Herd an ist
+            System.out.println("Warnung! Der Herd in der Küche ist an.\n" +
+                    "Wohnung wirklich verlassen?\n" +
+                    "1) Ja\n" +
+                    "2) Nein");
+            Scanner leave3 = new Scanner(System.in);
+            String input3 = leave3.nextLine();
+            if (input3.equals("2")) {
+                enterHallway();
+            }
+            apartment.leave();
             }
         }
     }

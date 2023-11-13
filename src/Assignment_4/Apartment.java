@@ -17,6 +17,7 @@ public class Apartment {
 
     public void leave() {
         this.entered = false;
+        System.out.println("Sie haben die Tour verlassen.");
     }
 
     public boolean isEntered() {

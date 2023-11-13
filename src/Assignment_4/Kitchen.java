@@ -5,8 +5,8 @@ public class Kitchen extends Room{
     /*
     Diese Klasse beschreibt den speziellen Raum 'Küche'
      */
-
-    private boolean stove = false;  //boolean dusche
+    private long start;
+    private boolean stove = false;  //boolean herd
     private boolean lighting = false;
 
     public Kitchen(){
@@ -14,15 +14,16 @@ public class Kitchen extends Room{
         this.stove = stove;
     }
 
-    public void switchStove(){
-        /*
-        Ofen an bzw. ausschalten mit der Ausgabe einer Information zum
-        Stromverbrauch während der Betriebszeit des Ofens.
-         */
-        if(stove){
-            System.out.println("Du hast 2000kWh verbraucht während der Herd an war.");
+ public void switchStove(){
+        if(!this.stove) {
+            System.out.println("Herd eingeschaltet.");
+            start = System.currentTimeMillis();
         }
-        this.stove = !stove;
+        else {
+            System.out.println("Herd ausgeschaltet.");
+            System.out.println((((System.currentTimeMillis() - start) / (long)60000)*(long)33.3) + "kWh were used.");
+        }
+        this.stove = !this.stove;
     }
 
     public void switchLight() {
